@@ -1,0 +1,368 @@
+@font-face {
+    font-family: "Overpass", sans-linear;
+    src: url(./font/Overpass-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+    --Verde-claro: #28a745;
+    --Verde-escuro: #218838;
+    --texto-color: #333;
+    --branco-bg: #f8f9fa;
+    --preto-bg: #343a40;
+    --branco: #fff;
+    --fundo-border: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-linear;
+    line-height: 1.6;
+    color: var(--texto-color);
+    background-color: var(--branco-bg);
+}
+
+.container-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'overpass', sans-linear;
+    color: var(--preto-bg);
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Verde-claro);
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    display: inline-block;
+    background: var(--Verde-claro);
+    color: var(--branco);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 500ms ease;
+    text-align: center;
+}
+
+.button:hover {
+    background: var(--Verde-escuro);
+}
+
+.button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+}
+
+header {
+    background: var(--preto-bg);
+    color: var(--branco);
+    padding: 15px 0;
+    border-bottom: 3px solid var(--Verde-claro);
+}
+
+header .container-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--branco);
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--branco);
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--Verde-claro);
+}
+
+.menu {
+    background: url('./img/viagem\ 1.jpg') no-repeat center center/cover;
+    color: var(--branco);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu .container-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.menu h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--branco);
+}
+
+.menu p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+
+
+
+.container-grid p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+
+
+
+.distancia .distancia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.distancia-item {
+    background: var(--branco);
+    border: 1px solid var(--fundo-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.distancia-item:hover {
+    transform: translateY(-5px);
+}
+
+.distancia-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.distancia-item h3 {
+    margin: 15px 0 10px;
+    color: var(--Verde-claro);
+}
+
+.distancia-item p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.distancia-item .button{
+    margin-bottom: 15px;
+}
+
+.tips ul {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.tips ul li {
+    background: var(--branco);
+    border: 1px solid var(--fundo-border);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato .form-grupo {
+    margin-bottom: 15px;
+}
+
+.contato label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--preto-bg);
+}
+
+.contato input[type="text"],
+.contato input[type="email"],
+.contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--fundo-border);
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Overpass', sans-linear;
+}
+
+.contato textarea {
+    resize: vertical;
+}
+
+.contato .button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+}
+
+
+footer {
+    height: 250px;
+    background-image: url(./img/banner\ sem\ logo.png);
+}
+
+footer img {
+    height: 90px;
+}
+
+footer .container-grid {
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.redes-sociais p {
+    color: var(--branco);
+
+    font-family: "overpass", sans-linear-bold;
+    font-size: 24px;
+}
+
+.icones-redes {
+    width: 340px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a {
+    color: var(--branco);
+}
+
+.icones-redes a:hover {
+    color: var(--preto-bg);
+}
+
+@media (max-width: 768px) {
+    header .container-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .menu h2 {
+        font-size: 2.5em;
+    }
+
+    .menu p {
+        font-size: 1em;
+    }
+
+    .distancia .distancia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li {
+        margin: 0 5px;
+    }
+
+    .menu h2 {
+        font-size: 2em;
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
